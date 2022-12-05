@@ -7,6 +7,8 @@ public class Main {
 		Pyykkikone kone2 = new Pyykkikone("Siemens", "PK1000S", 8);
 		kone1.tulostaTiedot();
 		kone1.Kaynnisty();
+		kone1.muutaTiedot("Miele", "Super10", 9);
+		kone1.tulostaTiedot(); // Tulostetaan muutetut tiedot
 	}
 
 }
@@ -50,6 +52,13 @@ class Pyykkikone {
 			System.out.println("Merkki: " + merkki);
 			System.out.println("Malli: " + malli);
 			System.out.println("Täyttömäärä: " + tayttomaara + " kg");
+		}
+		
+		public void muutaTiedot(String merkki, String malli, int tayttomaara) // Muutetaan tiedot parametreina saaduiksi
+		{
+			this.merkki = merkki;
+			this.malli = malli;
+			this.tayttomaara = tayttomaara;
 		}
 	}
 
